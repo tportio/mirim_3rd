@@ -12,7 +12,7 @@ const root = document.querySelector(".list1");
 
 function makeParentOption(datas){
 
-    //console.log(datas);
+    
     datas.forEach((data)=>{
         const li = document.createElement('li');
         const label = document.createElement('div');
@@ -20,8 +20,7 @@ function makeParentOption(datas){
         checkbox.type = 'checkbox';
         checkbox.value = data.id;
         label.append(checkbox);
-        label.append(data.name);
-        //li.innerText = data.name;
+        label.append(data.name);    
         menus.appendChild(label);
     })
   
