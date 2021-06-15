@@ -1,0 +1,30 @@
+body{
+    margin:0px;
+    padding: 0px;
+}
+.root{
+    width: 90%;
+    height: auto;
+    height: 500px;
+
+    margin: auto;
+    background-color: skyblue;
+}
+
+.title{
+
+}
+
+.menus {
+    padding: 2px;
+    display: none;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: block;
+  }
+  
+
+.menus li {
+    list-style: none;
+  }
