@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
 //비동기 통신 라이브러리 사용 
-function Menus() {
+function MenuDischild() {
     const [menus, setMenus] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -31,21 +29,24 @@ function Menus() {
   
     if (loading) return <div>로딩중..</div>;
     if (error) return <div>에러가 발생했습니다</div>;
-    if (!menus) return <div>에러가 발생했습니다</div>;
+    if (!menus) return null;
 
+    
     return (
 
       <ul>
-      {menus.map(menu => (
-          <div>
-            <input type="checkbox"/>
-              <h1> {menu.name} </h1>
-          <h4 style={{ color: 'gray' }}> {menu.price} </h4>
-            <h4 style={{ color: 'red' }}> {menu.salePrice} </h4>
-        </div>
-      ))}
-    </ul>
+        {menus.map(menu => (
+            <div>
+              <input type="checkbox"/>
+                <h1> {menu.name} </h1>
+            <h4 style={{ color: 'gray' }}> {menu.price} </h4>
+              <h4 style={{ color: 'red' }}> {menu.salePrice} </h4>
+          </div>
+        ))}
+      </ul>
     );
   }
-
-  export default Menus;
+  //if({menu.parent} != null){
+  // <h1> {menu.name} </h1>
+  //} 예상한 코드. null일 때 부모로 판단, 제목으로 출력 
+  export default MenuDischild;

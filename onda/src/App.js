@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from './menu';
-
+import MenuDischild from './menu-dischild';
 function App() {
   return (
     <div>
@@ -9,7 +9,9 @@ function App() {
       <Menu />
       <br></br>
       <h1>Disabled children</h1>
+      <MenuDischild />
     </div>
+  
   );
 }
 
